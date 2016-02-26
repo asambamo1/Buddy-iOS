@@ -40,7 +40,10 @@
 		15E7D31F190C33A5002EAE3F /* leftMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D31D190C33A5002EAE3F /* leftMenu.jpg */; };
 		15E7D321190C3B75002EAE3F /* rightMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D320190C3B75002EAE3F /* rightMenu.jpg */; };
 		15E7D327190C3DAE002EAE3F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D326190C3DAE002EAE3F /* gear.png */; };
+		81540D49ED17BFD06F514349 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF8E7A158064CC3351BA1DB /* libPods.a */; };
 		997929E2187336AA00716C77 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997929E1187336AA00716C77 /* FriendsViewController.m */; };
+		C0E52FCC1C7CE68D001642FA /* NetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */; };
+		DC6EF3F0E402CD1E88087339 /* libPods-SlideMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D87737AA65CC711B112395 /* libPods-SlideMenu.a */; };
 		F20D97431C78195B00B0FED6 /* OnboardingLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20D97421C78195B00B0FED6 /* OnboardingLocationViewController.m */; };
 		F2A1D4431C711E6300F11E3E /* sedan.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A1D4421C711E6300F11E3E /* sedan.png */; };
 		F2A1D4491C7165A400F11E3E /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2A1D4481C7165A400F11E3E /* white.jpg */; };
@@ -109,8 +112,14 @@
 		15E7D31D190C33A5002EAE3F /* leftMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leftMenu.jpg; sourceTree = "<group>"; };
 		15E7D320190C3B75002EAE3F /* rightMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rightMenu.jpg; sourceTree = "<group>"; };
 		15E7D326190C3DAE002EAE3F /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		28202F9B26843648AA69F7A3 /* Pods-SlideMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenu/Pods-SlideMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF8E7A158064CC3351BA1DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D87737AA65CC711B112395 /* libPods-SlideMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlideMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8961137889D9D8A9532A67CA /* Pods-SlideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenu/Pods-SlideMenu.release.xcconfig"; sourceTree = "<group>"; };
 		997929E0187336AA00716C77 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		997929E1187336AA00716C77 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		C0E52FCA1C7CE68D001642FA /* NetworkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingHelper.h; sourceTree = "<group>"; };
+		C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingHelper.m; sourceTree = "<group>"; };
 		F20D97411C78195B00B0FED6 /* OnboardingLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnboardingLocationViewController.h; path = ../OnboardingLocationViewController.h; sourceTree = "<group>"; };
 		F20D97421C78195B00B0FED6 /* OnboardingLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnboardingLocationViewController.m; path = ../OnboardingLocationViewController.m; sourceTree = "<group>"; };
 		F2A1D4421C711E6300F11E3E /* sedan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sedan.png; sourceTree = "<group>"; };
@@ -128,6 +137,8 @@
 				15371EE31728E3B400A508F4 /* UIKit.framework in Frameworks */,
 				15371EE51728E3B400A508F4 /* Foundation.framework in Frameworks */,
 				15371EE71728E3B400A508F4 /* CoreGraphics.framework in Frameworks */,
+				DC6EF3F0E402CD1E88087339 /* libPods-SlideMenu.a in Frameworks */,
+				81540D49ED17BFD06F514349 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +161,7 @@
 				15371F0F1728E3B400A508F4 /* SlideMenuTests */,
 				15371EE11728E3B400A508F4 /* Frameworks */,
 				15371EDF1728E3B400A508F4 /* Products */,
+				4347657EF99D78A6A6A62D73 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +181,8 @@
 				15371EE21728E3B400A508F4 /* UIKit.framework */,
 				15371EE41728E3B400A508F4 /* Foundation.framework */,
 				15371EE61728E3B400A508F4 /* CoreGraphics.framework */,
+				64D87737AA65CC711B112395 /* libPods-SlideMenu.a */,
+				5FF8E7A158064CC3351BA1DB /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +199,8 @@
 				15371EFD1728E3B400A508F4 /* MainStoryboard_iPad.storyboard */,
 				F2A1D44C1C71CAED00F11E3E /* Images.xcassets */,
 				15371EE91728E3B400A508F4 /* Supporting Files */,
+				C0E52FCA1C7CE68D001642FA /* NetworkingHelper.h */,
+				C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */,
 			);
 			path = SlideMenu;
 			sourceTree = "<group>";
@@ -295,6 +311,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		4347657EF99D78A6A6A62D73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28202F9B26843648AA69F7A3 /* Pods-SlideMenu.debug.xcconfig */,
+				8961137889D9D8A9532A67CA /* Pods-SlideMenu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,9 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15371F1A1728E3B400A508F4 /* Build configuration list for PBXNativeTarget "SlideMenu" */;
 			buildPhases = (
+				F797332BA208622D744F4CF6 /* Check Pods Manifest.lock */,
 				15371EDA1728E3B400A508F4 /* Sources */,
 				15371EDB1728E3B400A508F4 /* Frameworks */,
 				15371EDC1728E3B400A508F4 /* Resources */,
+				BC060186627CE954274A156B /* Embed Pods Frameworks */,
+				29A7BD1ACE9A2C3F514435CE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -415,6 +443,51 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		29A7BD1ACE9A2C3F514435CE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC060186627CE954274A156B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F797332BA208622D744F4CF6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -427,6 +500,7 @@
 				15C9AC171895A7E7006E6F27 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				15371EEF1728E3B400A508F4 /* main.m in Sources */,
 				15371EF31728E3B400A508F4 /* AppDelegate.m in Sources */,
+				C0E52FCC1C7CE68D001642FA /* NetworkingHelper.m in Sources */,
 				15C9AC141895A7D7006E6F27 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				15371F281728E44E00A508F4 /* SlideNavigationController.m in Sources */,
 				15C9AC111895A7BF006E6F27 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
@@ -548,6 +622,7 @@
 		};
 		15371F1B1728E3B400A508F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28202F9B26843648AA69F7A3 /* Pods-SlideMenu.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -564,6 +639,7 @@
 		};
 		15371F1C1728E3B400A508F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8961137889D9D8A9532A67CA /* Pods-SlideMenu.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
