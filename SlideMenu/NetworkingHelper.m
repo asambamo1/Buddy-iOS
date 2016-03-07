@@ -31,20 +31,24 @@ static NSString *const CREATE_ACCOUNT = @"createAccount";
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",BASE_URL,CREATE_ACCOUNT];
     
-    NSDictionary *parameters = @{@"name": @"Akila",
+    NSDictionary *parameters = @{@"name": @"Akila12",
                                  @"about_me":@"hiii",
                                  @"src_zip":@"95391",
                                  @"dest_zip":@"94085",
-                                 @"phone_number":@"555-555-5555",
+                                 @"phone_number":@"5555525555",
                                  @"email":@"akilas.karthik@gmail.com",
                                  @"gender":@"female",
                                  @"password":@"password"};
-                                 
-
+    
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
     [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"Response : %@",responseObject);
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSLog(@"Response : %@",json);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

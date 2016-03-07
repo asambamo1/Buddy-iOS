@@ -5,7 +5,6 @@
 #import "SlideNavigationContorllerAnimatorScale.h"
 #import "SlideNavigationContorllerAnimatorScaleAndFade.h"
 #import "SlideNavigationContorllerAnimatorSlideAndFade.h"
-#import <AFNetworking/AFNetworking.h>
 
 @implementation LeftMenuViewController
 
@@ -26,7 +25,6 @@
 	
 	UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blue.png"]];
 	self.tableView.backgroundView = imageView;
-    
 }
 
 #pragma mark - UITableView Delegate & Datasrouce -

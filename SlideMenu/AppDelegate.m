@@ -41,7 +41,7 @@
         NSLog(@"Revealed %@", menu);
     }];
 	
-	
+    
     // Override point for customization after application launch.
     return YES;
 }
