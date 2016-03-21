@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cLE-GR-3Mi" id="mlz-xO-oOg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nmX-lO-eSN">
@@ -406,7 +406,7 @@
         <!--Create Account-->
         <scene sceneID="DJ8-Zy-GvC">
             <objects>
-                <viewController storyboardIdentifier="OnboardingLocationViewController" title="Create Account" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HHZ-d4-S0H" customClass="OnboardingLocationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingLocationViewController" title="Create Account" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HHZ-d4-S0H" customClass="CreateZipViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qge-MF-Cnr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,10 +415,7 @@
                                 <rect key="frame" x="10" y="187" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="WorkZip:" destination="HHZ-d4-S0H" eventType="editingDidEnd" id="Dnf-Lb-1N9"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uJV-iv-TIF">
                                 <rect key="frame" x="288" y="138" width="22" height="30"/>
@@ -437,8 +434,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Next:" destination="HHZ-d4-S0H" eventType="touchUpInside" id="3oo-UW-5Ba"/>
-                                    <segue destination="BH1-6J-4va" kind="modal" animates="NO" id="72T-oM-3md"/>
+                                    <action selector="nextTapped:" destination="HHZ-d4-S0H" eventType="touchUpInside" id="IiX-EH-DE3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To start, tell us where your live and work. Click the map markers to auto-fill the ZIP of your current location." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QM9-9h-Mcd">
@@ -452,14 +448,16 @@
                                 <rect key="frame" x="10" y="138" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="HomeZip:" destination="HHZ-d4-S0H" eventType="editingDidEnd" id="7f8-8z-euo"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="homeZipTextField" destination="Lp0-2f-u1F" id="9Np-2N-uLw"/>
+                        <outlet property="workZipTextField" destination="plv-Nc-PiU" id="vRq-wN-xBn"/>
+                        <segue destination="BH1-6J-4va" kind="modal" identifier="createZipTocreateUser" id="2Pt-fv-dkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1l-FX-48M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,7 +466,7 @@
         <!--Create Account-->
         <scene sceneID="Hza-vj-UCW">
             <objects>
-                <viewController title="Create Account" id="BH1-6J-4va" sceneMemberID="viewController">
+                <viewController title="Create Account" id="BH1-6J-4va" customClass="CreateUserAccountViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2zR-TG-jAL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -568,7 +566,7 @@
         <!--Create Account-->
         <scene sceneID="52K-4G-lCE">
             <objects>
-                <viewController title="Create Account" id="4rO-UM-yFG" sceneMemberID="viewController">
+                <viewController title="Create Account" id="4rO-UM-yFG" customClass="CreatePasswordViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eov-Ec-LyA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,7 +628,7 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJ3-ci-bMv" id="c95-tX-Iz4">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iWQ-vV-pDm">
@@ -721,7 +719,7 @@
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MFj-zm-kmh" id="Z1m-Cs-KLm">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M7n-za-tWm">

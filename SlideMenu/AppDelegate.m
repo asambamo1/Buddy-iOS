@@ -41,9 +41,20 @@
         NSLog(@"Revealed %@", menu);
     }];
 	
+    int A;
+    int B;
+    printf("Enter number of test cases: ");
+        scanf("%d", &A);
+        scanf("%d", &B);
+        printf("%d\n", sum(A,B));
     
     // Override point for customization after application launch.
     return YES;
+}
+
+
+int sum(int a, int b) {
+    return a + b;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

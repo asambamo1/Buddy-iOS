@@ -42,6 +42,10 @@
 		15E7D327190C3DAE002EAE3F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D326190C3DAE002EAE3F /* gear.png */; };
 		81540D49ED17BFD06F514349 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF8E7A158064CC3351BA1DB /* libPods.a */; };
 		997929E2187336AA00716C77 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997929E1187336AA00716C77 /* FriendsViewController.m */; };
+		C02F33141C8E0461000DD684 /* CreateZipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F33131C8E0461000DD684 /* CreateZipViewController.m */; };
+		C02F33171C8E048F000DD684 /* CreatePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F33161C8E048F000DD684 /* CreatePhoneViewController.m */; };
+		C02F331A1C8E04A1000DD684 /* CreateUserAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F33191C8E04A1000DD684 /* CreateUserAccountViewController.m */; };
+		C02F331D1C8E04EC000DD684 /* CreatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F331C1C8E04EC000DD684 /* CreatePasswordViewController.m */; };
 		C0E52FCC1C7CE68D001642FA /* NetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */; };
 		DC6EF3F0E402CD1E88087339 /* libPods-SlideMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D87737AA65CC711B112395 /* libPods-SlideMenu.a */; };
 		F20D97431C78195B00B0FED6 /* OnboardingLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20D97421C78195B00B0FED6 /* OnboardingLocationViewController.m */; };
@@ -118,6 +122,14 @@
 		8961137889D9D8A9532A67CA /* Pods-SlideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenu/Pods-SlideMenu.release.xcconfig"; sourceTree = "<group>"; };
 		997929E0187336AA00716C77 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		997929E1187336AA00716C77 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		C02F33121C8E0461000DD684 /* CreateZipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateZipViewController.h; sourceTree = "<group>"; };
+		C02F33131C8E0461000DD684 /* CreateZipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateZipViewController.m; sourceTree = "<group>"; };
+		C02F33151C8E048F000DD684 /* CreatePhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePhoneViewController.h; sourceTree = "<group>"; };
+		C02F33161C8E048F000DD684 /* CreatePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePhoneViewController.m; sourceTree = "<group>"; };
+		C02F33181C8E04A1000DD684 /* CreateUserAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserAccountViewController.h; sourceTree = "<group>"; };
+		C02F33191C8E04A1000DD684 /* CreateUserAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserAccountViewController.m; sourceTree = "<group>"; };
+		C02F331B1C8E04EC000DD684 /* CreatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePasswordViewController.h; sourceTree = "<group>"; };
+		C02F331C1C8E04EC000DD684 /* CreatePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePasswordViewController.m; sourceTree = "<group>"; };
 		C0E52FCA1C7CE68D001642FA /* NetworkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingHelper.h; sourceTree = "<group>"; };
 		C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingHelper.m; sourceTree = "<group>"; };
 		F20D97411C78195B00B0FED6 /* OnboardingLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnboardingLocationViewController.h; path = ../OnboardingLocationViewController.h; sourceTree = "<group>"; };
@@ -272,6 +284,14 @@
 			children = (
 				F20D97411C78195B00B0FED6 /* OnboardingLocationViewController.h */,
 				F20D97421C78195B00B0FED6 /* OnboardingLocationViewController.m */,
+				C02F33121C8E0461000DD684 /* CreateZipViewController.h */,
+				C02F33131C8E0461000DD684 /* CreateZipViewController.m */,
+				C02F33151C8E048F000DD684 /* CreatePhoneViewController.h */,
+				C02F33161C8E048F000DD684 /* CreatePhoneViewController.m */,
+				C02F33181C8E04A1000DD684 /* CreateUserAccountViewController.h */,
+				C02F33191C8E04A1000DD684 /* CreateUserAccountViewController.m */,
+				C02F331B1C8E04EC000DD684 /* CreatePasswordViewController.h */,
+				C02F331C1C8E04EC000DD684 /* CreatePasswordViewController.m */,
 				15CBD678172A15F900F0C53E /* LeftMenuViewController.h */,
 				15CBD679172A15F900F0C53E /* LeftMenuViewController.m */,
 				15E7D316190C24E3002EAE3F /* RightMenuViewController.h */,
@@ -496,7 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15E7D318190C24E3002EAE3F /* RightMenuViewController.m in Sources */,
+				C02F33141C8E0461000DD684 /* CreateZipViewController.m in Sources */,
 				15C9AC1D1895A81D006E6F27 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				C02F331A1C8E04A1000DD684 /* CreateUserAccountViewController.m in Sources */,
 				15C9AC171895A7E7006E6F27 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				15371EEF1728E3B400A508F4 /* main.m in Sources */,
 				15371EF31728E3B400A508F4 /* AppDelegate.m in Sources */,
@@ -508,7 +530,9 @@
 				F20D97431C78195B00B0FED6 /* OnboardingLocationViewController.m in Sources */,
 				997929E2187336AA00716C77 /* FriendsViewController.m in Sources */,
 				15CBD67D172A15F900F0C53E /* LeftMenuViewController.m in Sources */,
+				C02F331D1C8E04EC000DD684 /* CreatePasswordViewController.m in Sources */,
 				15C9AC1A1895A80E006E6F27 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				C02F33171C8E048F000DD684 /* CreatePhoneViewController.m in Sources */,
 				15CBD67E172A15F900F0C53E /* ProfileViewController.m in Sources */,
 				15CBD689172A22B700F0C53E /* ProfileDetailViewController.m in Sources */,
 			);

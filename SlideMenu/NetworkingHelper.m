@@ -12,7 +12,7 @@
 
 static NSString *const BASE_URL = @"http://nucleus-backend.herokuapp.com";
 static NSString *const CREATE_ACCOUNT = @"createAccount";
-
+static NSString *const LOGIN = @"login";
 
 @implementation NetworkingHelper
 
@@ -49,11 +49,55 @@ static NSString *const CREATE_ACCOUNT = @"createAccount";
         
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSLog(@"Response : %@",json);
+        if(json)
+            completionBlock(YES,json,nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        completionBlock(NO,nil,&error);
     }];
+}
+
+- (void) login:(NSDictionary *)userData withCompletionBlock:(APICompletionBlock)completionBlock {
     
+    NSString *url = [NSString stringWithFormat:@"%@/%@",BASE_URL,LOGIN];
+    
+    NSDictionary *parameters = @{@"email" : @"aravind@smartlifedigital.com",
+                                 @"phone_number" : @"555-555-5555",
+                                 @"password" : @"********"};
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSLog(@"Response : %@",json);
+        if(json)
+            completionBlock(YES,json,nil);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completionBlock(NO,nil,&error);
+    }];
+}
+
+- (void) postCall:(NSString*)url withJson:(NSDictionary *)jsonData withCompletionBlock:(APICompletionBlock)completionBlock {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [manager POST:url parameters:jsonData progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSLog(@"Response : %@",json);
+        if(json)
+            completionBlock(YES,json,nil);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completionBlock(NO,nil,&error);
+    }];
+
 }
 
 @end
