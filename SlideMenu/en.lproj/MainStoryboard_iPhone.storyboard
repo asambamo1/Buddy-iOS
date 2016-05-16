@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Left Menu View Controller-->
@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nmX-lO-eSN">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -257,7 +257,7 @@
         <!--Log In-->
         <scene sceneID="fe8-Xu-DEa">
             <objects>
-                <viewController id="Rnc-YT-XEu" sceneMemberID="viewController">
+                <viewController id="Rnc-YT-XEu" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qy8-tT-LdF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -289,7 +289,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mAB-md-uek" kind="push" id="FfU-Zw-oz1"/>
+                                    <action selector="loginPressed:" destination="Rnc-YT-XEu" eventType="touchUpInside" id="GvH-ST-lZb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kwZ-ju-9mk">
@@ -302,8 +302,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="huN-S6-yGa"/>
                     <connections>
+                        <outlet property="passwordTextField" destination="1li-i4-fu1" id="zob-I9-SaA"/>
+                        <outlet property="usernameTextField" destination="e9E-0E-u4L" id="tEZ-Rt-hxa"/>
                         <segue destination="nrg-5w-bbF" kind="push" identifier="FakeSegue" id="Rkp-YM-Gz0"/>
                         <segue destination="qY1-Jo-UbZ" kind="push" identifier="FakeSegue33" id="37q-Mo-UFN"/>
+                        <segue destination="mAB-md-uek" kind="push" id="JPj-kT-xH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC9-GK-F3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,7 +390,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HHZ-d4-S0H" kind="modal" animates="NO" id="NE6-LI-8S4"/>
+                                    <segue destination="HHZ-d4-S0H" kind="push" animates="NO" id="NE6-LI-8S4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -453,10 +456,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="COV-mM-uUd"/>
                     <connections>
                         <outlet property="homeZipTextField" destination="Lp0-2f-u1F" id="9Np-2N-uLw"/>
                         <outlet property="workZipTextField" destination="plv-Nc-PiU" id="vRq-wN-xBn"/>
-                        <segue destination="BH1-6J-4va" kind="modal" identifier="createZipTocreateUser" id="2Pt-fv-dkK"/>
+                        <segue destination="BH1-6J-4va" kind="push" identifier="createZipTocreateUser" id="2Pt-fv-dkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1l-FX-48M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -490,17 +494,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="WAX-3h-tXM" kind="modal" animates="NO" id="pLQ-UL-uGf"/>
+                                    <action selector="nextTapped:" destination="BH1-6J-4va" eventType="touchUpInside" id="bL7-OG-eK9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" textAlignment="natural" id="zSn-Cy-ZUl">
-                                <rect key="frame" x="20" y="237" width="280" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now tell us a little bit about yourself. This will help find the right carpool match for you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tIr-Iv-BIt">
                                 <rect key="frame" x="16" y="7" width="291" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -512,6 +508,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="WAc-O0-emU"/>
+                    <connections>
+                        <outlet property="genderTextField" destination="vcB-DQ-j9U" id="8yV-V7-afu"/>
+                        <outlet property="nameTextField" destination="DUw-dH-Hry" id="7Jp-tN-AOz"/>
+                        <segue destination="WAX-3h-tXM" kind="push" identifier="createUserToCreatePhone" id="Br0-SH-bV3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vO-6L-WUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -520,7 +521,7 @@
         <!--Create Account-->
         <scene sceneID="RXj-bV-6Aj">
             <objects>
-                <viewController title="Create Account" id="WAX-3h-tXM" sceneMemberID="viewController">
+                <viewController title="Create Account" id="WAX-3h-tXM" customClass="CreatePhoneViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vwy-ed-LD1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,12 +553,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4rO-UM-yFG" kind="modal" animates="NO" id="nh3-CZ-DRN"/>
+                                    <action selector="nextTapped:" destination="WAX-3h-tXM" eventType="touchUpInside" id="vQz-J5-Dyc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3qu-xR-yY8"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="qTS-cQ-12h" id="Lzp-wG-Iou"/>
+                        <outlet property="phoneTextField" destination="ZRF-Xf-O3R" id="PyL-eY-M51"/>
+                        <segue destination="4rO-UM-yFG" kind="push" identifier="createPhoneToCreatePassword" id="GLe-g3-8x0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQN-Dy-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,11 +610,17 @@
                                 <state key="normal" title="Create Account" backgroundImage="blue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="4rO-UM-yFG" eventType="touchUpInside" id="7lI-hV-dLf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1GB-AN-WG0"/>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="xOu-S3-uJW" id="SZ4-P3-Vk9"/>
+                        <outlet property="passwordTextField" destination="pzZ-Bx-JPK" id="PgA-CN-0C9"/>
                         <segue destination="mAB-md-uek" kind="modal" id="149-23-eVn"/>
                     </connections>
                 </viewController>
@@ -632,7 +645,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iWQ-vV-pDm">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -723,7 +736,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M7n-za-tWm">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -758,6 +771,6 @@
         <image name="white.jpg" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="149-23-eVn"/>
+        <segue reference="JPj-kT-xH8"/>
     </inferredMetricsTieBreakers>
 </document>

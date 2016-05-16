@@ -7,8 +7,11 @@
 //
 
 #import "CreateUserAccountViewController.h"
+#import "CreatePhoneViewController.h"
 
-@interface CreateUserAccountViewController ()
+@interface CreateUserAccountViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *genderTextField;
 
 @end
 
@@ -16,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.nameTextField.delegate = self;
+    self.genderTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +28,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"createUserToCreatePhone"])
+    {
+        // Get reference to the destination view controller
+        CreatePhoneViewController *vc = [segue destinationViewController];
+        vc.homeZip = self.homeZip;
+        vc.workZip = self.workZip;
+        vc.name = self.nameTextField.text;
+        vc.gender = self.genderTextField.text;
+    }
+    
+}
+
+- (IBAction)nextTapped:(id)sender {
+    if (self.nameTextField.text.length && self.genderTextField.text.length) {
+        [self performSegueWithIdentifier:@"createUserToCreatePhone" sender:sender];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Fields" message:@"Enter the name and gender correctly" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return YES;
+}
 /*
 #pragma mark - Navigation
 

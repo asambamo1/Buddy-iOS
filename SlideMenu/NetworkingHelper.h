@@ -13,5 +13,7 @@ typedef void (^APICompletionBlock)(BOOL success,NSDictionary *jsonResponse,NSErr
 
 @interface NetworkingHelper : NSObject
 
++(instancetype) sharedHelper;
 - (void) createAccount:(NSDictionary *)userData withCompletionBlock:(APICompletionBlock)completionBlock;
+- (void) login:(NSDictionary *)userData withCompletionBlock:(APICompletionBlock)completionBlock;
 @end

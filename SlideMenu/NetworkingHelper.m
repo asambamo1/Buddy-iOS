@@ -31,21 +31,21 @@ static NSString *const LOGIN = @"login";
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",BASE_URL,CREATE_ACCOUNT];
     
-    NSDictionary *parameters = @{@"name": @"Akila12",
-                                 @"about_me":@"hiii",
-                                 @"src_zip":@"95391",
-                                 @"dest_zip":@"94085",
-                                 @"phone_number":@"5555525555",
-                                 @"email":@"akilas.karthik@gmail.com",
-                                 @"gender":@"female",
-                                 @"password":@"password"};
+//    NSDictionary *parameters = @{@"name": @"Akila12",
+//                                 @"about_me":@"hiii",
+//                                 @"src_zip":@"95391",
+//                                 @"dest_zip":@"94085",
+//                                 @"phone_number":@"5555525555",
+//                                 @"email":@"akilas.karthik@gmail.com",
+//                                 @"gender":@"female",
+//                                 @"password":@"password"};
     
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:url parameters:userData progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSLog(@"Response : %@",json);
@@ -61,15 +61,15 @@ static NSString *const LOGIN = @"login";
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",BASE_URL,LOGIN];
     
-    NSDictionary *parameters = @{@"email" : @"aravind@smartlifedigital.com",
-                                 @"phone_number" : @"555-555-5555",
-                                 @"password" : @"********"};
+//    NSDictionary *parameters = @{@"email" : @"aravind@smartlifedigital.com",
+//                                 @"phone_number" : @"555-555-5555",
+//                                 @"password" : @"********"};
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:url parameters:userData progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSLog(@"Response : %@",json);

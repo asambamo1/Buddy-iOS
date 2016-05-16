@@ -46,6 +46,7 @@
 		C02F33171C8E048F000DD684 /* CreatePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F33161C8E048F000DD684 /* CreatePhoneViewController.m */; };
 		C02F331A1C8E04A1000DD684 /* CreateUserAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F33191C8E04A1000DD684 /* CreateUserAccountViewController.m */; };
 		C02F331D1C8E04EC000DD684 /* CreatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02F331C1C8E04EC000DD684 /* CreatePasswordViewController.m */; };
+		C061D7301CE155BB00942131 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C061D72F1CE155BB00942131 /* LoginViewController.m */; };
 		C0E52FCC1C7CE68D001642FA /* NetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */; };
 		DC6EF3F0E402CD1E88087339 /* libPods-SlideMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D87737AA65CC711B112395 /* libPods-SlideMenu.a */; };
 		F20D97431C78195B00B0FED6 /* OnboardingLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20D97421C78195B00B0FED6 /* OnboardingLocationViewController.m */; };
@@ -130,6 +131,8 @@
 		C02F33191C8E04A1000DD684 /* CreateUserAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserAccountViewController.m; sourceTree = "<group>"; };
 		C02F331B1C8E04EC000DD684 /* CreatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePasswordViewController.h; sourceTree = "<group>"; };
 		C02F331C1C8E04EC000DD684 /* CreatePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePasswordViewController.m; sourceTree = "<group>"; };
+		C061D72E1CE155BB00942131 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C061D72F1CE155BB00942131 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C0E52FCA1C7CE68D001642FA /* NetworkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingHelper.h; sourceTree = "<group>"; };
 		C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingHelper.m; sourceTree = "<group>"; };
 		F20D97411C78195B00B0FED6 /* OnboardingLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnboardingLocationViewController.h; path = ../OnboardingLocationViewController.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 		15371EE81728E3B400A508F4 /* SlideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				C0E52FCA1C7CE68D001642FA /* NetworkingHelper.h */,
+				C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */,
 				15E7D319190C2894002EAE3F /* Images */,
 				15CBD675172A15F900F0C53E /* Helper Classes */,
 				15371F241728E43600A508F4 /* Source */,
@@ -211,8 +216,6 @@
 				15371EFD1728E3B400A508F4 /* MainStoryboard_iPad.storyboard */,
 				F2A1D44C1C71CAED00F11E3E /* Images.xcassets */,
 				15371EE91728E3B400A508F4 /* Supporting Files */,
-				C0E52FCA1C7CE68D001642FA /* NetworkingHelper.h */,
-				C0E52FCB1C7CE68D001642FA /* NetworkingHelper.m */,
 			);
 			path = SlideMenu;
 			sourceTree = "<group>";
@@ -304,6 +307,8 @@
 				15CBD67B172A15F900F0C53E /* ProfileViewController.m */,
 				15CBD687172A22B600F0C53E /* ProfileDetailViewController.h */,
 				15CBD688172A22B700F0C53E /* ProfileDetailViewController.m */,
+				C061D72E1CE155BB00942131 /* LoginViewController.h */,
+				C061D72F1CE155BB00942131 /* LoginViewController.m */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -393,7 +398,7 @@
 				ORGANIZATIONNAME = "Aryan Ghassemi";
 				TargetAttributes = {
 					15371EDD1728E3B400A508F4 = {
-						DevelopmentTeam = T6383WV29W;
+						DevelopmentTeam = 676ZG8L9VU;
 					};
 				};
 			};
@@ -526,6 +531,7 @@
 				15C9AC141895A7D7006E6F27 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				15371F281728E44E00A508F4 /* SlideNavigationController.m in Sources */,
 				15C9AC111895A7BF006E6F27 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				C061D7301CE155BB00942131 /* LoginViewController.m in Sources */,
 				15CBD67C172A15F900F0C53E /* HomeViewController.m in Sources */,
 				F20D97431C78195B00B0FED6 /* OnboardingLocationViewController.m in Sources */,
 				997929E2187336AA00716C77 /* FriendsViewController.m in Sources */,
@@ -654,7 +660,7 @@
 				GCC_PREFIX_HEADER = "SlideMenu/SlideMenu-Prefix.pch";
 				INFOPLIST_FILE = "SlideMenu/SlideMenu-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartlifedigital.carpool-buddy-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartlifedigital.carpool-buddy-app.HU";
 				PRODUCT_NAME = "Carpool Buddy";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -671,7 +677,7 @@
 				GCC_PREFIX_HEADER = "SlideMenu/SlideMenu-Prefix.pch";
 				INFOPLIST_FILE = "SlideMenu/SlideMenu-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartlifedigital.carpool-buddy-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartlifedigital.carpool-buddy-app.HU";
 				PRODUCT_NAME = "Carpool Buddy";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

@@ -9,7 +9,7 @@
 #import "CreateZipViewController.h"
 #import "CreateUserAccountViewController.h"
 
-@interface CreateZipViewController ()<UIAlertViewDelegate>
+@interface CreateZipViewController ()<UIAlertViewDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *homeZipTextField;
 @property (weak, nonatomic) IBOutlet UITextField *workZipTextField;
 @end
@@ -18,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.homeZipTextField.delegate = self;
+    self.workZipTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +40,6 @@
         vc.homeZip = self.homeZipTextField.text;
         vc.workZip = self.workZipTextField.text;
     }
-
 }
 
 - (IBAction)nextTapped:(id)sender {
@@ -50,6 +50,12 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Fields" message:@"Enter the Zip codes" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 

@@ -10,4 +10,9 @@
 
 @interface CreatePhoneViewController : UIViewController
 
+@property (nonatomic,strong) NSString *homeZip;
+@property (nonatomic,strong) NSString *workZip;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *gender;
+
 @end
